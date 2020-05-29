@@ -72,6 +72,7 @@ margin-bottom: 2px;
 }
 h4{
     font-weight: normal;
+    padding: 3px;
 }
 #mission{
     margin-bottom: 2px;
@@ -85,11 +86,11 @@ h4{
     text-align: center;
 }
 .card{
-   background-color: antiquewhite;
+   background-color: white;
     display:inline-block;
     border-radius: 2px;
     border:2px solid black;
-    width:21%;
+    width:25%;
     padding: 5px;
     margin:19px 15px;
     height:200px;
