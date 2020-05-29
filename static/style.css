@@ -1,21 +1,39 @@
 #navbar{
+    display:flex;
     height:50px;
     background-color: coral;
-    padding:15px 3px;
+    padding:15px 50px;
 }
-#logo{
-    width:5px;
+.txt{
+    
+    margin: 15px;
+    padding-top: 2px;
+    padding:4px;
+    font-size: 16px;
+}
+h5{
+    text-decoration: underline;
+    font-size:19px;
+    padding:3px;
+}
+#logo
+{
+    display:flex;
+    flex-direction: column;
+    color:white;
 }
 img{
-    height:50px;
     position: absolute;
-    top:0;
-    border-radius:50%;
-    padding:4px;
-    
+    padding: 5px;
+    top:1px;
+    left:2px;
+    border-radius: 50%;
+    height:45px;
 }
 #navbar ul{
+    margin: auto;
     display:flex;
+    top:5px;
     flex-direction: row;
     justify-content: center;
 }
