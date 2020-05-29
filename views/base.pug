@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Dance Academy
+    block scripts
+    block style
+  body
+    nav#navbar
+            div#logo
+                div.ig
+                    img(src="../static/img/logo.png")
+                    | DA
+            ul
+                li #[a(href="/home") Home]
+                li #[a(href="/") About]
+                li #[a(href="/") Our Services]
+                li #[a(href="/contact") Contact Us]
+    block content
+    footer#footer
+        | Copyright © 2020 Dance Academy

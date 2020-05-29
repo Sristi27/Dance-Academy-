@@ -19,8 +19,17 @@ app.get('/',(req,res)=>{
 
 const con="hi";
 const params ={'title':"head","content":con};
-res.render("index.pug",params);
+res.render("home.pug",params);
 });
+
+
+app.get('/contact',(req,res)=>{
+
+    const con="hi";
+    const params ={'title':"head","content":con};
+    res.render("contact.pug",params);
+    });
+
 app.listen(port,()=>{
     console.log(`running on ${port}`);
     });
