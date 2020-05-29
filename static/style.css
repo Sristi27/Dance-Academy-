@@ -35,7 +35,7 @@ img{
 }
 #intro::before{
     content: "";
-    background: url("/static/bkg.jpg") ;
+    background: url("/static/img/bkg.jpg") ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position:initial;
