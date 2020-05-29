@@ -46,6 +46,7 @@ app.get('/services',(req,res)=>{
 });
 
 app.post('/contact',(req,res)=>{
+    console.log("You have submiited the form succesfully")
     //const cont={'content':"parag"};
     console.log(req.body);
     //name=req.body.name;
@@ -53,7 +54,7 @@ app.post('/contact',(req,res)=>{
     //let text=`name is ${name} and age is ${age}`;
     //fs.writeFileSync("output.txt",text);
     //const params={'message':"Form submitted","content":"cont"};
-    res.status(200).render('index.pug');
+    res.status(200).render('contact.pug');
 }
 );
 
