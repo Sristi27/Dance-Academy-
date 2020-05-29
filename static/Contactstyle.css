@@ -1,0 +1,62 @@
+h1{
+    margin: 28px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+section{
+    min-height:60vh;
+}
+.btn{
+    margin:8px;
+    padding:8px;
+    outline:none;
+    border: 1.1px solid black;
+    background-color: rgb(245, 215, 204);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+section::before{
+    opacity: 0.8;
+    content: "";
+    background: url("/static/img/di_ballet_class.png");
+    width:100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    top:0;
+
+}
+::placeholder{
+    color: black;
+}
+.myInput
+{
+    background-color: transparent;
+    border:1px solid black;
+    outline: none;
+    border-radius: 5px;;
+    text-align: center;
+    width:38%;
+    padding:20px;
+    margin:11px;
+}
+
+.cont{
+    margin:0 ;
+    padding:10px;
+
+}
+
+form{
+    
+    height:280x;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+}
