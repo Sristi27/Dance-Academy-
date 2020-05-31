@@ -1,9 +1,6 @@
 extends base.pug
 
 
-block scripts
-  script(src='../static/script.js')
-
 block style
   style
     include ../static/style.css
@@ -11,3 +8,7 @@ block style
 
 block content
   | about page
+
+block script
+
+    script(src="../static/script.js")
