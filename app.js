@@ -15,9 +15,9 @@ app.set('view engine','pug');
 //set views directory
 app.set('views',path.join(__dirname, 'views'));
 
-app.get('/home',(req,res)=>{
+app.get('/',(req,res)=>{
     const con="hi";
-    const params ={'title':"head","content":con};
+    const params ={'title':"HOME","content":con};
     res.render("home.pug",params);
 });
 
@@ -25,7 +25,7 @@ app.get('/home',(req,res)=>{
 app.get('/contact',(req,res)=>{
 
     const con="hi";
-    const params ={'title':"head","content":con};
+    const params ={'title':"CONTACT","content":con};
     res.render("contact.pug",params);
 });
 
@@ -33,7 +33,7 @@ app.get('/contact',(req,res)=>{
 app.get('/about',(req,res)=>{
 
     const con="hi";
-    const params ={'title':"head","content":con};
+    const params ={'title':"ABOUT US","content":con};
     res.render("about.pug",params);
 });
 
@@ -41,7 +41,7 @@ app.get('/about',(req,res)=>{
 app.get('/services',(req,res)=>{
 
         const con="hi";
-        const params ={'title':"head","content":con};
+        const params ={'title':"OUR SERVICES","content":con};
         res.render("services.pug",params);
 });
 

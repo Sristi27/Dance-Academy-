@@ -1,13 +1,18 @@
 extends base.pug
 
-
-block scripts
-  script(src='../static/script.js')
-
 block style
   style
     include ../static/style.css
-    include ../static/Contactstyle.css
+    include ../static/Servicestyle.css
 
 block content
-    | services page
+  
+    div.con
+      h3 Trainings
+      h3 2 HourClass
+      h3 Best Tutors
+      h3 Different Courses for Children
+      h3 All age groups welcome
+
+block script
+  script(src="../static/script.js")

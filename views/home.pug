@@ -1,16 +1,19 @@
 extends base.pug
-block scripts
-  script(src='../static/script.js')
 
 block style
   style
       include ../static/style.css
 
 block content 
-
-    section#intro
-        div Welcome to Dance Academy
-        div Eat Sleep Dance Repeat
+    div#intro
+        img.mySlides(src="../static/img/bkg1.jpg")
+        img.mySlides(src="../static/img/bkg2.jpg")
+        img.mySlides(src="../static/img/bkg3.jpg")
+        img.mySlides(src="../static/img/bkg4.jpg")
+        
+        section.container
+            span#heading1 Welcome to Dance Academy
+            span#heading2 Eat Sleep Dance Repeat
     
     section#mission
         h4 Our Mission
@@ -43,6 +46,13 @@ block content
             img(src="../static/img/hp.png" , alt="cocalcolasponsor" ,class="spimg")
             img(src="../static/img/intel1.jpg" , alt="cocalcolasponsor" ,class="spimg")
             img(src="../static/img/amazon.png" , alt="cocalcolasponsor" ,class="spimg")
+
+            
+
+block script
+
+    script(src="../static/script.js")
+    
     
     
     
