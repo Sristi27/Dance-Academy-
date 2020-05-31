@@ -17,7 +17,7 @@ app.set('views',path.join(__dirname, 'views'));
 
 app.get('/',(req,res)=>{
     const con="hi";
-    const params ={'title':"HOME","content":con};
+    const params ={'title':"THE DANCE ACADEMY","content":con};
     res.render("home.pug",params);
 });
 

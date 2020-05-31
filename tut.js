@@ -1,5 +1,5 @@
 //inserting data in database
-use sristidb
+//use sristidb
 db.items.insertOne({name:"phone",price:20000,sold:98})
 //for one
 db.items.insertMany

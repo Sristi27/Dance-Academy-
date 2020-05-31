@@ -2,19 +2,27 @@ doctype html
 html
   head
     title #{title}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     block style
   body
-    nav#navbar
+    nav.navbar#bar
             div#logo
                 div.ig
                     img(src="../static/img/logo.png")
-                    | DA
+                    span DA
             ul
                 li #[a(href="/") Home]
                 li #[a(href="/about") About]
                 li #[a(href="/services") Our Services]
                 li #[a(href="/contact") Contact Us]
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
     block content
     footer#footer
         | Copyright © 2020 Dance Academy
     block script
+        
+        
+          
+        
