@@ -14,6 +14,8 @@ nav{
     position: absolute;
     transform: translate(-50%,-50%);
     top:35%;
+    text-transform: uppercase;
+    display: block;
     left:50%;
     width:100%;
     
@@ -24,33 +26,29 @@ nav{
     position: absolute;
     top:16%;
 }
-.container span{
-      text-transform: uppercase;
-      display: block;
-}
 
 #heading1{
 
     color: black;
-    font-size:40px;
+    font-size:45px;
     font-weight:600;
     line-height: 5px;
     padding:5px;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
     position: relative;
     animation: text 2s 1;
 }
 #heading2{
 
-    font-size: 32px;
+    font-size: 33px;
     color: rgb(41, 8, 8);
 }
 
 @keyframes text{
     0%{
-        color:white;
-        margin-bottom: -40px;
+        letter-spacing: 5px;
+        margin-bottom: -80px;
     }
     
 }

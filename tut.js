@@ -26,3 +26,10 @@ db.items.find({price:{$gte:50}}, {price:1})
 
 {price:1,sold:1}
 //shows price and sold
+
+//delete
+db.items.delteOne({}) .deleteMany({})
+
+//update
+.updateOne({filter},{$set: {price:}})
+.updateMany({},{{}})

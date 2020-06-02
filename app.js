@@ -1,8 +1,26 @@
 const express=require('express');
+const bodyparser=require("body-parser");
+//mongoose module
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/contactsfordance', {useNewUrlParser: true , useUnifiedTopology: true});
 //const fs=require("fs");
 const app=express();
 const path =require("path");
 const port=80;
+
+//mpngoose
+//define schema
+var cnctSchema=new mongoose.Schema({
+    name:String,
+    age:String,
+    adress:String,
+    phone:String
+});
+
+//model
+var Contact=mongoose.model("Contact",cnctSchema);
+
+//createOBJ
 
 //Express
 
@@ -46,15 +64,25 @@ app.get('/services',(req,res)=>{
 });
 
 app.post('/contact',(req,res)=>{
-    console.log("You have submiited the form succesfully")
+    //console.log("You have submiited the form succesfully")
     //const cont={'content':"parag"};
-    console.log(req.body);
+    //console.log(req.body);
     //name=req.body.name;
     //age=req.body.age;
     //let text=`name is ${name} and age is ${age}`;
     //fs.writeFileSync("output.txt",text);
-    //const params={'message':"Form submitted","content":"cont"};
-    res.status(200).render('contact.pug');
+
+    //obj creation
+    var contactdata = new Contact(req.body);
+    contactdata.save().then(()=>{
+        res.render('contact.pug');
+    }).catch(()=>{
+
+        res.status(404).send('error')
+    });
+     
+    //res.render('contact.pug');
+   
 }
 );
 

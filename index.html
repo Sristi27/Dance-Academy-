@@ -31,3 +31,51 @@ block scripts
     padding:20px;
 
 }
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/sristidb', {useNewUrlParser: true , useUnifiedTopology: true});
+
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("we're connected!")
+});
+
+var kittySchema = new mongoose.Schema({
+  name: String
+});
+
+//make a method
+kittySchema.methods.speak = function () {
+  var greeting =  "Meow name is " + this.name
+  console.log(greeting);
+}
+  //schema gets converted to model
+ //no changes: locked
+ //model:final compiled schema
+ var Kitten = mongoose.model('Kitten', kittySchema);
+
+  //after creating model we can work with objects
+  //object
+  var silence = new Kitten({ name: 'Silence' });
+console.log(silence.name); 
+
+silence.speak();
+
+var fluffy = new Kitten({ name: 'fluffy' });
+fluffy.speak(); // "Meow name is fluffy"
+
+
+
+//now save in a doc
+//save silence obj
+silence.save(function (err,silence) {
+  if (err) return console.error(err);
+  silence.speak();
+});
+
+//save fluffy obj
+fluffy.save(function (err, fluffy) {
+  if (err) return console.error(err);
+  fluffy.speak();
+});
