@@ -6,6 +6,10 @@ sub.addEventListener("submit",function(){
       alert("Thank you for your time! Your details have been submitted!");
       
     }
+    for(var i=0;i<inputs.length;i++)
+    {
+      inputs[i].innerHTML="";
+    }
   });
   
 
